@@ -3,6 +3,5 @@
 
 
 #c program
-c/a.out
 c/*
-c/*.o
+!c/*.c
