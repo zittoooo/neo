@@ -1,8 +1,16 @@
 # .env
 .env
 
-
 #c program
 c/*
 !c/*.c
 !c/lib
+
+!c/makefile
+c/makefile/*.o
+
+!c/meta/
+c/meta/*
+!c/meta/*.c
+!c/meta/Makefile
+
