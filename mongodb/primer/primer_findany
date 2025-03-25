@@ -1,0 +1,3 @@
+use test
+db.primer.find({borough:"Queens"}).count()
+db.primer.find({borough:"Queens"}).sort({address:1}).pretty()
