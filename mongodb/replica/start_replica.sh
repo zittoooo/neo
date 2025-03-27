@@ -1,12 +1,12 @@
 #!/bin/bash
 
-/replica/mongodb/bin/mongod --config /replica/master.conf &
+/replica/mongodb/bin/mongod --config /work/neo/mongodb/replica/master.conf &
 
-/replica/mongodb/bin/mongod --config /replica/slave1.conf &
+/replica/mongodb/bin/mongod --config /work/neo/mongodb/replica/slave1.conf &
 
-/replica/mongodb/bin/mongod --config /replica/slave2.conf &
+/replica/mongodb/bin/mongod --config /work/neo/mongodb/replica/slave2.conf &
 
-/replica/mongodb/bin/mongod --config /replica/arbiter.conf &
+/replica/mongodb/bin/mongod --config /work/neo/mongodb/replica/arbiter.conf &
 
 netstat -ntlp | grep mongo
 
