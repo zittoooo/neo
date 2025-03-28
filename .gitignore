@@ -32,5 +32,5 @@ mongodb/backup
 
 ## oracle
 oracle/node/dbConfig.js
-oracle/node/node_modules
-oracle/node/package-lock.json
+oracle/**/node_modules
+oracle/**/package-lock.json
