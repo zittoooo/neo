@@ -51,6 +51,7 @@ mono $IP_TEMP:27022 < rs.init
 # process status
 sleep 2s
 
+#MongoDB에서 샤드 추가는 sh.addShard()로 동적으로 수행하는 것이 원칙
 mongo $IP_TEMP:27017 < rs.addShard
 
 netstat -ntlp | grep mongo
