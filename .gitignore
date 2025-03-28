@@ -30,3 +30,7 @@ python/**/__pycache__/
 ## mongodb
 mongodb/backup
 
+## oracle
+oracle/node/dbConfig.js
+oracle/node/node_modules
+oracle/node/package-lock.json

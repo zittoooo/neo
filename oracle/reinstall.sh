@@ -60,3 +60,5 @@ EOF
 
 echo 
 echo "## setup Done"
+
+sleep 3s
