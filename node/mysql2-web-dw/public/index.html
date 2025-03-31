@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sync-MySQL Example</title>        
+    </head>
+    <body>
+        <h1>Sync-MySQL Example</h1>
+        <form name="userForm" target="targetURL">
+            <input type="button" value="GET /HELLO" onClick='document.targetURL.location.href="/Hello"'>&nbsp;&nbsp;&nbsp;
+            <input type="button" value="GET select st_info" onClick='document.targetURL.location.href="/select"'>
+            <p>ST_ID &nbsp;<input type="text" name="id" size="10"></p>
+            <p>NAME &nbsp;<input type="text" name="name" size="10"></p>
+            <p>DEPT &nbsp;<input type="text" name="dept" size="10"></p>
+            <input type="button" value="Insert st_info" onClick='document.targetURL.location.href="/insert?st_id=" +
+                document.userForm.id.value + "&name=" + document.userForm.name.value + "&dept=" + document.userForm.dept.value'>&nbsp;&nbsp;&nbsp;
+            <input type="button" value="update st_info" onClick='document.targetURL.location.href="/update?st_id=" +
+                document.userForm.id.value + "&name=" + document.userForm.name.value + "&dept=" + document.userForm.dept.value'>&nbsp;&nbsp;&nbsp;
+            <input type="button" value="delete st_info" onClick='document.targetURL.location.href="/delete?st_id=" + document.userForm.id.value'>&nbsp;&nbsp;&nbsp;
+
+        </form>
+        
+        <hr>
+        <iframe name="targetURL" width="90%" height="500" style="border:none" src="http://192.168.1.38:8000/Hello">
+
+        </iframe>
+
+
+    </body>
+
+</html>
