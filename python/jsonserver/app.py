@@ -7,7 +7,6 @@ from typing import Optional
 
 app = FastAPI()
 base_url = 'http://192.168.1.38:5000/users'
-
 @app.get(path='/')
 async def healthCheck():
     return "OK"
@@ -85,8 +84,7 @@ async def users_param(id=str):
             data = response.json()
         except ValueError:
             raise HTTPException(status_code=500, detail="Invalid JSON response from server")
-        if not data:
-            return {"message": "User not found", "data": None}
+        return data
     
     except requests.exceptions.RequestException:
         raise HTTPException(status_code=500, detail="Request failed")
