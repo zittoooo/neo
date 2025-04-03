@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>eod</title>
+        <script>
+            function isPrime(num) {
+                num = parseInt(num);
+                if(num == 2)
+                    return 1;
+                for (let i = 2; i < num; i++) {
+                    if (num % i == 0) {
+                        return 0;
+                    }
+                }
+                return 1;
+            }
+        </script>
+  
+    </head>
+    <body>
+        <h3>함수 이용 - 소수 판별</h3>
+
+        <script>
+            let n = prompt("숫자를 입력하세요", 3);
+            n = parseInt(n);
+
+            if (isPrime(n)) {
+                document.write(`${n} 는 소수입니다.`);
+            } else {
+                document.write(`${n} 는 소수가 아닙니다.`);
+            }
+            //console.log(["abs", 1])
+        </script>
+    </body>
+
+</html>

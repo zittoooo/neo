@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>input</title>
+    </head>
+    <body>
+        <h3>input, reduce, map</h3>
+
+        <script>
+            n = parseInt(prompt("how much number input?", 3));
+            building = prompt("input buildings : ", '3 2 5');
+            building = building.split(' ').map(Number);
+
+            document.write(`<br> ${building}`)
+
+            // 배열에서 가장 작은 값 찾기
+            min_building = Math.min(...building);
+            document.write(`<br> min(building) : ${min_building}`);
+
+            min_building_n = min_building * n;
+            document.write(`<br> min(building) * n : ${min_building_n}`);
+            
+            // 배열 요소 더하기
+            sum_building = 0;
+            building.forEach((e) => sum_building += parseInt(e));
+            document.write(`<br> sum(building) : ${sum_building}`);
+            let sum = building.reduce((a, b) => a + b, 0);  // sum 하기
+
+
+            result = sum_building - min_building_n;
+            document.write(`<br> sum(building) - min(building) : ${result}`);
+
+
+
+
+        </script>
+    </body>
+
+</html>

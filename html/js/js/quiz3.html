@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>quiz3</title>
+    </head>
+    <body>
+        <h3>quiz3</h3>
+
+        <script>
+            let n = 5;
+            let array = new Array(n);
+            
+            document.write("배열의 길이 : " + n + "<br>");
+            for (let i = 0; i < n; i++) {
+                array[i] = Math.floor(Math.random() * 100 + 1);
+                document.write(array[i] + " ");
+            }
+            document.write("<br>");
+
+            //for (let i = 0; i < Math.floor(array.length / 2); i++) {
+            //    let temp = array[i];
+            //    array[i] = array[n-i-1];
+            //    array[n-i-1] = temp;
+            //}
+            for (let i = 0; j = array.length - 1, i < j; i++, j--) {
+                let temp = arry[i];
+                array[i] = arry[j];
+                arry[j] = temp;
+            }
+
+
+            document.write("<br>Reverse 배열의 값 <br>");
+            for (let i = 0; i < n; i++) {
+                document.write(array[i] + " ");
+            }
+
+        </script>
+    </body>
+
+</html>
