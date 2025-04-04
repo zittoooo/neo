@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User Authentication</title>       
+        <link type="text/css" rel="stylesheet" href="mystyle.css"> 
+    </head>
+    <body>
+        <h3>User Authentication</h3>
+        <hr />
+        <div class="box" syle="height: 250px;">
+            <form action="/insert" method="post" name="userForm">
+                
+                <p>USER_ID &nbsp;<input type="text" name="id" size="10"></p>
+                <p>Passwd &nbsp;<input type="password" name="pw" size="10"></p>
+                <div class="box-inner">
+                    <input type="button" value="get select" onClick='document.targetURL.location.href="/select"'>
+                    <input type="button" value="get selectQuery" onClick='document.targetURL.location.href="/selectQuery?id=" + document.userForm.id.value'>
+                </div>
+                
+                <input type="submit" value="post insert">
+                <input type="submit" value="post update" formaction="/update"/>
+                <input type="submit" value="post delete" formaction="/delete"/>
+                <!-- <input type="submit" value="post delete" /> -->
+
+            </form>
+        </div>
+        <hr>
+        <iframe name="targetURL" width="90%" height="400" style="border:none" src="http://192.168.1.38:8000/Hello">
+
+        </iframe>
+
+
+    </body>
+
+</html>
