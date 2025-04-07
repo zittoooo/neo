@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prime number 워커 태스크</title>
+    </head>
+    <body>
+        <h3>prime number 워커 채스크</h3>
+        <hr />
+        <input type="number" id="input" size="10"> is PrimeNumber??
+        <button type="button" id="prime" onclick="send()">send</button>
+        <hr />
+        <div>
+            <span id="output">result</span>
+        </div>
+        <script>
+            let worker = new Worker("prime.js"); // 워커 테스크  생성
+
+            function send() {
+                let number = document.getElementById("number").value;
+                worker.postMessage(number);
+            }
+
+            worker.onmessage = function(e) {
+                document.getElementById("output").textContent = e.data;
+            }
+        </script>
+    </body>
+</html>
