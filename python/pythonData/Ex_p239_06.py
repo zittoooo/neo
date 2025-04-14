@@ -8,11 +8,11 @@ myindex = ['감강찬', '김유신', '이순신', '안익태', '윤동주']
 myseries = Series(data=mylist, index=myindex)
 myseries.plot(kind='bar', rot=0, use_index=True, grid=False, color = ['r', 'g', 'b', 'y', 'c'])
 
-plt.xlabe('학생이름')
+plt.xlabel('학생이름')
 plt.ylabel('점수')
 plt.title('학생점수')
 
-ratio = 100 * series / myseries.sum()
+ratio = 100 * myseries / myseries.sum()
 print(round(ratio, 1))
 print('-' * 50)
 
