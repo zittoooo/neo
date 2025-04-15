@@ -6,7 +6,7 @@ driver = webdriver.Chrome()
 print(type(driver))
 print('-' * 50)
 
-print('Go Google~!!')
+print('Go Goole~!!')
 url = 'http://www.google.com'
 driver.get(url)
 
@@ -22,11 +22,10 @@ time.sleep(wait)
 
 imagefile = 'p368_selenium.png'
 driver.save_screenshot(imagefile)
-print(imagefile + ' saved.')
+print(imagefile + ' saved')
 
 wait = 3
 driver.implicitly_wait(wait)
 
 driver.quit()
-print('Browser closed.')
-
+print('Brwowser closed')
