@@ -66,7 +66,7 @@ print(type(ko_con_text))
 print('-' * 50)
 
 komo = Komoran(userdic='user_dic.txt')
-tokens_ko = komo.nouns(ko_con_text)
+tokens_ko = komo.nouns(ko_con_text) # 명사 추출
 stop_word_file = 'stopwords.txt'
 stop_file = open(stop_word_file, 'rt', encoding='utf-8')
 stop_words = [ word.strip() for word in stop_file.readlines()]

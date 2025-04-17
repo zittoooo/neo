@@ -20,6 +20,8 @@ print('-' * 50)
 sortedData = sorted(bindo.items(), key=lambda x: x[1], reverse=True)
 print(sortedData)
 print('-' * 50)
+# [('life', 1.0), ('college', 0.8235294117647058), ('year', 0.7058823529411765),
+# ('Apple', 0.5882352941176471), ('one', 0.5882352941176471), ('want', 0.4117647058823529)
 
 charData = sortedData[:10]
 print(charData)

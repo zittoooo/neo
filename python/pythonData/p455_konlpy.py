@@ -1,4 +1,5 @@
 from konlpy.tag import Komoran
+# 한글 형태소 분석
 
 sentence = '코로나 바이러스 태블릿 PC, 설진욱, 가나다라'
 

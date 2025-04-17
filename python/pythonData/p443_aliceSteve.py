@@ -12,14 +12,14 @@ img_file  = Image.open(image_file)
 print(type(img_file))
 print('-' * 50)
 
-alice_mask = np.array(img_file)
+alice_mask = np.array(img_file) # 이미지 파일도 사실 숫자 형태의 조합
 print(type(alice_mask))
 print('-' * 50)
 
 filename = 'steve.txt'
 myfile = open(filename, mode='r', encoding='utf-8')
 
-plt.figure(figsize=(8, 8))
+plt.figure(figsize=(8, 8)) # 그림 그리기
 plt.imshow(alice_mask, interpolation='bilinear')
 plt.axis('off')
 
@@ -27,7 +27,7 @@ filename = 'p434_alice_graph01.png'
 plt.savefig(filename, dpi=400, bbox_inches='tight')
 print(filename + ' saved')
 
-mystopwords = set(STOPWORDS)
+mystopwords = set(STOPWORDS) # 의미없이 자주 등장하는 단어 제거하기 위해
 mystopwords.add('said')
 mystopwords.update(['hohoho', 'hahaha'])
 
