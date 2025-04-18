@@ -3,14 +3,14 @@ import json
 def get_json_data():
     filename = 'jumsu.json'
     myfile = open(filename, mode='r', encoding='utf-8')
-    print(myfile)
+    #print(myfile)
 
     
     myfile = myfile.read()
     print(myfile)
     
     jsondata = json.loads(myfile)
-    print(type(jsondata))
+    print(type(jsondata)) # <class 'list'>
     print(jsondata)
     
     for item in jsondata:
