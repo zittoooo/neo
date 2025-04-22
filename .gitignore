@@ -22,6 +22,10 @@ maven/**/target
 ## nodejs
 node/**/node_modules
 node/**/package-lock.json
+**/node_modules
+**/package-lock.json
+**/package.json
+dataProject/safe
 
 ## python
 .idea

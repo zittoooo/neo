@@ -16,6 +16,7 @@ app.engine('html', require('ejs').renderFile);
 //app.set('views', path.join(__dirname, '../safe'))
 //app.set('view engine', 'html')
 //app.engine('html', require('ejs').renderFile);
+
 // 라우터
 const mainRouter = require('./controllers/mainController');
 app.use('/', mainRouter)

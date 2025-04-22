@@ -151,10 +151,10 @@ router.get('/safeZone', async function(req, res) {
 
   try {
     const response = await axios.get(option3, {
-      params: region,
+      params: {region},
     });
 
-
+    res.set('Content-Type', 'text/html');
     res.send(response.data);
   } 
   catch (err) {
