@@ -38,7 +38,7 @@ async function getSeniorAccidentData() {
 		const data = await response.json();
 
 		if (data.result_code === "success") {
-			document.getElementById("result").innerHTML = `
+			document.getElementById("senior_result").innerHTML = `
 			<h3>${region} ${year}년 노령 보행자 교통사고</h3>
 			<p>사고 건수: ${data.data.accident_count}</p>
 			<p>사망자 수: ${data.data.death_count}</p>
@@ -70,10 +70,8 @@ async function getPer10Accident() {
 
 		if (data1.result_code === "success") {
 			document.getElementById("per10result").innerHTML = `
-			<h6>어린이</h6>
 			<p>어린이 인구 10만명 당 사고 건수: ${data1.data.per10}</p>
 
-			<h6>노령자</h6>
 			<p>노령 인구 10 만명 당 사고 건수: ${data2.data.per10}</p>
 			`;
 			//console.log(data);
