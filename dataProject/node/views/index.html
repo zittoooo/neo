@@ -15,6 +15,16 @@
    <link href='https://fonts.googleapis.com/css?family=Oswald&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
    <title>Home</title>
 
+
+   <script>
+      window.addEventListener('scroll', function() {
+         const scrollPosition = window.scrollY;  // 현재 스크롤 위치
+         const image = document.querySelector('.JJscroll-image');
+       
+         // 이미지가 스크롤 위치에 따라 아래로 움직이게
+         image.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+       });
+   </script>
    <!-- Analytics -->
 
    <!-- Analytics END -->
@@ -61,9 +71,19 @@
       <!-- bloc-1 END -->
 
       <!-- bloc-0 -->
+
+      
+
       <div class="bloc l-bloc" id="bloc-0">
          <div class="container bloc-sm">
-            <div class="row">
+            <div class="JJimage-bar">
+               <img src="roadBG.png" alt="Scroll Image" class="JJfixed-image">
+               <img src="car2.png" alt="Scroll Image" class="JJscroll-image">
+
+            </div>
+            <div class="JJJcontent">
+   <div class="row">
+      
 
                <div
                   class="text-center text-md-start l-bloc col-md-12 col-lg-12 offset-lg-0 mb-4 text-sm-start pe-0 ps-0 ps-sm-2 pe-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
@@ -173,9 +193,9 @@
 
 
                <div
-               id="kids-section" class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
+                  class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
                   <!-- 그래프 이미지-->
-                  <div class="bento-box Jbg-img-box text-start Jbox-bg-1">
+                  <div id="kids-section" class="bento-box Jbg-img-box text-start Jbox-bg-1">
 
                      <h1>&nbsp;&nbsp;&nbsp;어린이 보행자 교통사고</h1>
                      <hr />
@@ -342,9 +362,9 @@
 
                <!-- 10만명당  -->
                <div
-               id="senior-section" class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
+                  class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
                   <!-- 그래프 이미지-->
-                  <div class="bento-box Jbg-img-box text-start">
+                  <div id="senior-section" class="bento-box Jbg-img-box text-start">
 
                      <h1>&nbsp;&nbsp;&nbsp;인구10만명당 교통사고 현황</h1>
                      <hr />
@@ -402,7 +422,7 @@
                   </div>
                </div>
                <!-- 10만명당 끝-->
-
+</div>
                <!-- bloc-0 END -->
                <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
                <h2 id="safeZone-section">보호구역 현황</h2>
@@ -433,7 +453,7 @@
             </div>
          </div>
       </div>
-
+</div>
                <!-- Additional JS -->
                <script src="./js/bootstrap.bundle.min.js?2023"></script>
                <script src="./js/blocs.min.js?1610"></script>
