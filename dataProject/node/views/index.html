@@ -25,6 +25,7 @@
          image.style.transform = `translateY(${scrollPosition * 0.2}px)`;
        });
    </script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    <!-- Analytics -->
 
    <!-- Analytics END -->
@@ -282,8 +283,10 @@
 
                      <h1>&nbsp;&nbsp;&nbsp;노령 보행자 교통사고</h1>
                      <hr />
-                     <br><br>
-                     <img src="./DeathRate.png" width="500px" />
+                     
+                     <canvas id="JGraph"></canvas>
+                     
+                     <!-- <img src="./DeathRate.png" width="500px" /> -->
                      <a href="./project/"><img src="img/lazyload-ph.png" data-src="img/arrow.svg"
                            class="img-fluid mx-auto d-block arrow-btn lazyload" alt="arrow" data-bs-placement="top"
                            data-bs-toggle="tooltip" title="View Project." width="40" height="40"></a>
@@ -337,7 +340,7 @@
                            <div id="senior_result"></div>
                            <br>
 
-                           <h5 class="result-card">교통사고 사망자중 평균적으로<strong>약 60%이상은</strong>고령자 입니다.</h5>
+                           <h5 class="result-card">교통사고 사망자중 평균적으로<strong>약 50%이상은</strong>고령자 입니다.</h5>
 
                            <a href="./project/"><img src="img/lazyload-ph.png" data-src="img/arrow.svg"
                                  class="img-fluid mx-auto d-block arrow-btn lazyload" alt="arrow"
@@ -367,8 +370,10 @@
                   <div id="senior-section" class="bento-box Jbg-img-box text-start">
 
                      <h1>&nbsp;&nbsp;&nbsp;인구10만명당 교통사고 현황</h1>
-                     <hr />
-                     <img src="./per10.png" width="480px" height="350px" />
+                     <hr /><br><br>
+                     
+                     <div style="width: 520px;"><canvas id="acquisitions"></canvas></div>
+                     <!-- <img src="./per10.png" width="480px" height="350px" /> -->
                      <a href="./project/"><img src="img/lazyload-ph.png" data-src="img/arrow.svg"
                            class="img-fluid mx-auto d-block arrow-btn lazyload" alt="arrow" data-bs-placement="top"
                            data-bs-toggle="tooltip" title="View Project." width="40" height="40"></a>
@@ -399,7 +404,7 @@
                            <div id="per10result"></div>
                            <br>
 
-                           <h5 class="result-card">인구 10만명당 보행자 사고건수:<br><strong>노령 보행자가</strong> 어린이 보행자의 <ng>약2~3배
+                           <h5 class="result-card">인구 10만명당 보행자 사고건수:<br><strong>노령 보행자가</strong> 어린이 보행자의 <ng>약2배
                               </ng>
                            </h5>
 
@@ -459,6 +464,7 @@
                <script src="./js/blocs.min.js?1610"></script>
                <script src="./js/lazysizes.min.js" defer></script><!-- Additional JS END -->
                <script src="./js/script.js"></script>
+               <script type="module" src="./js/acquisitions.js"></script>
 </body>
 
 </html>
