@@ -1,4 +1,3 @@
-
 async function getAccidentData() {
 	const year = document.getElementById("kids_year").value;
 	const region = document.getElementById("kids_region").value;
