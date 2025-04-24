@@ -535,14 +535,13 @@ body{
 	height:auto;
   }
   .quiz-box.small {
-	background: #eaf5ff;
+	background: #E6E6FA;
 	border-radius: 10px;
 	max-width: 600px;
 	height:380px;
 	padding : 20px;
 	
 	font-family: sans-serif;
-   
 	}
 	
 	.quiz-box.small .quiz-question {
