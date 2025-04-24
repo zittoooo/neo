@@ -28,12 +28,17 @@
       function showMessage() {
          document.getElementById("quizmessage").style.display = "block";
       }
+
+      window.onload = async function () {
+
+         const region = document.getElementById("regionSelect").value;
+         const iframe = document.getElementById("safeZoneFrame");
+         const url = `http://192.168.1.38:8000/safeZone?region=${region}`;
+
+         iframe.src = url;
+      };
    </script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <!-- Analytics -->
-
-   <!-- Analytics END -->
-
 </head>
 
 <body>
@@ -82,8 +87,10 @@
                      class="col-md-12 align-self-center col-lg-12 text-lg-start text-center pe-0 ps-0 ps-md-2 pe-md-2 text-md-start mb-3 mb-lg-4 ps-lg-3 pe-lg-3">
                      <a href="./catergory/" class="a-btn text-lg-left token-link active-token">Quiz</a><a
                         href="#kids-section" class="a-btn text-lg-left token-link">Kids</a>
-                     <a href="#senior-section" class="a-btn text-lg-left token-link">Senior</a><a
-                        href="#safeZone-section" class="a-btn text-lg-left token-link">Safe Zone
+                     <a href="#senior-section" class="a-btn text-lg-left token-link">Senior</a>
+                     <a href="#compare-section" class="a-btn text-lg-left token-link">Compare</a>
+                     <a href="#policy-section" class="a-btn text-lg-left token-link">Policy</a>
+                     <a href="#safeZone-section" class="a-btn text-lg-left token-link">Safe Zone
                         Map</a><!-- <a href="./catergory/" class="a-btn text-lg-left token-link">Safe Zone Map</a><a href="./catergory/" class="a-btn text-lg-left token-link">Icon Design</a><a href="./catergory/" class="a-btn text-lg-left token-link">Copy Writing</a> -->
                   </div>
 
@@ -157,8 +164,7 @@
                      </div>
                   </div>
 
-                  <div id="kids-section" style="position: relative; top:-200px;">
-                  </div>
+                  <div id="kids-section" style="position: relative; top:-200px;"></div>
                   <!-- <div src="./ppt.png"> </div> -->
                   <div
                      class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
@@ -240,12 +246,12 @@
 
                   <div id="senior-section" style="position: relative; top:-200px;">
                   </div>
-                  <!-- 노령 보행자 교통사고 -->
+                  <!-- 고령 보행자 교통사고 -->
                   <div
                      class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
                      <!-- 그래프 이미지-->
                      <div class="bento-box Jbg-img-box text-start">
-                        <h1>&nbsp;&nbsp;&nbsp;노령 보행자 교통사고</h1>
+                        <h1>&nbsp;&nbsp;&nbsp;고령 보행자 교통사고</h1>
                         <hr />
                         <canvas id="JGraph"></canvas>
                      </div>
@@ -254,7 +260,7 @@
                      class="col-md-12 text-md-start mb-4 col-lg-6 text-sm-start text-start pe-0 ps-0 col-sm-6 pe-sm-2 ps-sm-2 mb-sm-3 mb-lg-4 ps-lg-3 pe-lg-3">
                      <div class="bento-box Jbg-img-box">
                         <div class="container">
-                           <h1>&nbsp;&nbsp;&nbsp;노령 보행자 교통사고</h1>
+                           <h1>&nbsp;&nbsp;&nbsp;고령 보행자 교통사고</h1>
                            <hr />
                            <div class="year-select-wrap">
                               <label for="senior_year">년도 선택:</label>
@@ -308,8 +314,10 @@
 
                      </div>
                   </div>
-                  <!-- 노령 보행자 교통사고 끝-->
+                  <!-- 고령 보행자 교통사고 끝-->
 
+
+                  <div id="compare-section" style="position: relative; top:-200px;"></div>
                   <!-- 10만명당  -->
                   <div
                      class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
@@ -347,7 +355,7 @@
                               <div id="per10result"></div>
                               <br>
 
-                              <h5 class="result-card">인구 10만명당 보행자 사고건수:<br><strong>노령 보행자가</strong> 어린이 보행자의 <ng>
+                              <h5 class="result-card">인구 10만명당 보행자 사고건수:<br><strong>고령 보행자가</strong> 어린이 보행자의 <ng>
                                     약2배
                                  </ng>
                               </h5>
@@ -360,12 +368,14 @@
                   </div>
                   <!-- 10만명당 끝-->
                </div>
-
+               <div id="policy-section" style="position: relative; top:-100px;"></div>
                <div style="display: flex; justify-content: center; align-items: center;">
                   <img src="ppt.png" width="80%" height="90%">
                </div>
-               <br><br><br>
+               <br><br><br><br><br><br>
+               <div id="safeZone-section" style="position: relative; top:-100px;"></div>
 
+               <!-- <div id="kids-section" style="position: relative; top:-200px;"></div> -->
                <!-- bloc-0 END -->
                <div style=" display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
                   <h2 id="safeZone-section">보호구역 현황</h2>

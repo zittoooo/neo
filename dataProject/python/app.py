@@ -54,8 +54,27 @@ async def generate_map(region: str):
     response = response.json()
     items = response.get("items", [])
     # print("api에서 호출 완료")
+    
+    if region == '서울':
+        lat, long = 37.566716096454094, 126.97872586343644
+    elif region == '인천':
+        lat, long = 37.45595051834017, 126.70530349092297
+    elif region == '경기':
+        lat, long = 37.28887730299317, 127.0534543425194
+    elif region == '광주':
+        lat, long = 35.1597863238146, 126.8514988238977
+    elif region == '대구':
+        lat, long = 35.89180678873961, 128.60103417835703
+    elif region == '부산':
+        lat, long = 35.17946875800593, 129.07497319151116
+    elif region == '충북':
+        lat, long = 36.635379988561304, 127.4914172125919
+    elif region == '충남':
+        lat, long = 36.6588604105043, 126.6729650827204
+    elif region == '제주':
+        lat, long = 33.49975910162712, 126.53150563312505
 
-    map_osm = folium.Map(location=[37.4946639663726, 127.02756080657997], zoom_start=7)
+    map_osm = folium.Map(location=[lat, long], zoom_start=14)
     for item in items:
         latitude = item['Y'] # 위도
         longitude = item['X'] # 경도 126.984250187332

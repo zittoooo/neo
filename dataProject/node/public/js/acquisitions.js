@@ -10,7 +10,7 @@ const mixChart = new Chart(mctx, {
       labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [
             {
-               label: 'Bar Chart',
+               label: '사고건수',
                data: [434, 406, 409, 488, 324, 369, 389, 363],
                backgroundColor: 'rgba(75, 50, 192, 0.2)',
                borderColor: 'rgba(75, 50, 192, 1)',
@@ -18,7 +18,7 @@ const mixChart = new Chart(mctx, {
                yAxisID: 'y1'
             },
             {
-               label: 'Line Chart',
+               label: '사망자수',
                data: [8,8,3,6,3,2,3,2],
                type: 'line', // 이 dataset은 line 타입
                borderColor: 'rgba(100, 100, 150, 1)',
