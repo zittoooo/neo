@@ -13,7 +13,7 @@ async function getAccidentData() {
 			document.getElementById("result").innerHTML = `
 			<h3>${region} ${year}년 어린이 교통사고</h3>
 			<p>사고 건수: ${data.data.accident_count}</p>
-			<p>사망자 수: ${data.data.death_count}</p>
+			<p style="color: #800000; font-weight: bold;">사망자 수: ${data.data.death_count}</p>
 			<p>부상자 수: ${data.data.injury_count}</p>
 			`;
 			//console.log(data);
@@ -41,12 +41,12 @@ async function getSeniorAccidentData() {
 			document.getElementById("senior_result").innerHTML = `
 			<h3>${region} ${year}년 노령 보행자 교통사고</h3>
 			<p>사고 건수: ${data.data.accident_count}</p>
-			<p>사망자 수: ${data.data.death_count}</p>
+			<p style="color: #800000; font-weight: bold;">사망자 수: ${data.data.death_count}</p>
 			<p>부상자 수: ${data.data.injury_count}</p>
 			`;
 			//console.log(data);
 		} else {
-			document.getElementById("result").innerText = "데이터를 불러오지 못했습니다.";
+			document.getElementById("senior_result").innerText = "데이터를 불러오지 못했습니다.";
 		}
 	} catch (err) {
 	console.error("API 요청 오류:", err);

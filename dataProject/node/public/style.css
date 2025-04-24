@@ -185,7 +185,10 @@ body{
   }
   
   
-  
+  #result, #senior_result, #per10result {
+    text-align: center;
+    margin-top: 30px;
+  }
   
   
   .card-sq, .card-sq .card-header, .card-sq .card-footer{
