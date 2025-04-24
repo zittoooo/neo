@@ -22,7 +22,7 @@
          const scrollPosition = window.scrollY;  // 현재 스크롤 위치
          const image = document.querySelector('.JJscroll-image');
          // 이미지가 스크롤 위치에 따라 아래로 움직이게
-         image.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+         image.style.transform = `translateY(${scrollPosition * 0.25}px)`;
       });
 
       function showMessage() {
@@ -81,11 +81,13 @@
                   <div
                      class="col-md-12 align-self-center col-lg-12 text-lg-start text-center pe-0 ps-0 ps-md-2 pe-md-2 text-md-start mb-3 mb-lg-4 ps-lg-3 pe-lg-3">
                      <a href="./catergory/" class="a-btn text-lg-left token-link active-token">Quiz</a><a
-                        href="#kids-section" class="a-btn text-lg-left token-link">Kids</a><a href="#senior-section"
-                        class="a-btn text-lg-left token-link">Senior</a><a href="#safeZone-section"
-                        class="a-btn text-lg-left token-link">Safe Zone
+                        href="#kids-section" class="a-btn text-lg-left token-link">Kids</a>
+                     <a href="#senior-section" class="a-btn text-lg-left token-link">Senior</a><a
+                        href="#safeZone-section" class="a-btn text-lg-left token-link">Safe Zone
                         Map</a><!-- <a href="./catergory/" class="a-btn text-lg-left token-link">Safe Zone Map</a><a href="./catergory/" class="a-btn text-lg-left token-link">Icon Design</a><a href="./catergory/" class="a-btn text-lg-left token-link">Copy Writing</a> -->
                   </div>
+
+
                   <div
                      class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
                      <!-- 그래프 이미지-->
@@ -155,7 +157,9 @@
                      </div>
                   </div>
 
-
+                  <div id="kids-section" style="position: relative; top:-200px;">
+                  </div>
+                  <!-- <div src="./ppt.png"> </div> -->
                   <div
                      class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
                      <!-- 그래프 이미지-->
@@ -166,6 +170,8 @@
                         <canvas id="mixChart" width="500" height="350"></canvas>
                      </div>
                   </div>
+
+
                   <div
                      class="col-md-12 text-md-start mb-4 col-lg-6 text-sm-start text-start pe-0 ps-0 col-sm-6 pe-sm-2 ps-sm-2 mb-sm-3 mb-lg-4 ps-lg-3 pe-lg-3">
                      <div class="bento-box Jbg-img-box">
@@ -214,12 +220,14 @@
                               <div id="result"></div>
                               <br>
 
-                              <h5 class="result-card"><strong>운전자의 안전운전 의무</strong>를 강화한 민식이법 제정 후<br> 어린이 보행자 사고 감소
+                              <h5 class="result-card"><strong>운전자의 안전운전 의무</strong>를 강화한 민식이법 제정 후<br> 어린이 보행자 사고
+                                 감소
                               </h5>
 
                            </div>
 
                            </form>
+
                            <br>
                            <!--
                   <div id="result"></div>
@@ -230,16 +238,15 @@
                      </div>
                   </div>
 
-
+                  <div id="senior-section" style="position: relative; top:-200px;">
+                  </div>
                   <!-- 노령 보행자 교통사고 -->
                   <div
                      class="col-md-6 text-center text-md-start mb-4 col-lg-6 text-sm-start pe-0 ps-0 col-sm-6 ps-sm-2 pe-sm-2 mb-sm-2 mb-lg-4 ps-lg-3 pe-lg-3">
                      <!-- 그래프 이미지-->
                      <div class="bento-box Jbg-img-box text-start">
-
                         <h1>&nbsp;&nbsp;&nbsp;노령 보행자 교통사고</h1>
                         <hr />
-
                         <canvas id="JGraph"></canvas>
                      </div>
                   </div>
@@ -340,7 +347,8 @@
                               <div id="per10result"></div>
                               <br>
 
-                              <h5 class="result-card">인구 10만명당 보행자 사고건수:<br><strong>노령 보행자가</strong> 어린이 보행자의 <ng>약2배
+                              <h5 class="result-card">인구 10만명당 보행자 사고건수:<br><strong>노령 보행자가</strong> 어린이 보행자의 <ng>
+                                    약2배
                                  </ng>
                               </h5>
                            </div>
@@ -352,8 +360,14 @@
                   </div>
                   <!-- 10만명당 끝-->
                </div>
+
+               <div style="display: flex; justify-content: center; align-items: center;">
+                  <img src="ppt.png" width="80%" height="90%">
+               </div>
+               <br><br><br>
+
                <!-- bloc-0 END -->
-               <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
+               <div style=" display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 20px;">
                   <h2 id="safeZone-section">보호구역 현황</h2>
                   <select id="regionSelect" class="safe-select custom-select">
                      <option value="서울">서울</option>
