@@ -2,6 +2,57 @@ const ctx = document.getElementById('acquisitions');
 
 const dead = document.getElementById('JGraph');
 
+const mctx = document.getElementById('mixChart').getContext('2d');
+
+const mixChart = new Chart(mctx, {
+   type: 'bar', // 기본 차트 타입은 bar로 지정
+   data: {
+      labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [
+            {
+               label: 'Bar Chart',
+               data: [434, 406, 409, 488, 324, 369, 389, 363],
+               backgroundColor: 'rgba(75, 50, 192, 0.2)',
+               borderColor: 'rgba(75, 50, 192, 1)',
+               borderWidth: 1,
+               yAxisID: 'y1'
+            },
+            {
+               label: 'Line Chart',
+               data: [8,8,3,6,3,2,3,2],
+               type: 'line', // 이 dataset은 line 타입
+               borderColor: 'rgba(100, 100, 150, 1)',
+               backgroundColor: 'rgba(100, 99, 150 , 0.2)',
+               fill: false, // 영역 채우기 없음
+               //tension: 0.3 , // 곡선 부드럽게
+               yAxisID: 'y2'
+            }
+      ]
+   },
+   options: {
+      responsive: false,
+      scales: {
+         y1: { // 첫 번째 y축 (Bar chart)
+            beginAtZero: true,
+            position: 'left', // 왼쪽에 표시
+        },
+        y2: { // 두 번째 y축 (Line chart)
+            beginAtZero: true,
+            grace: '50%',
+            position: 'right', // 오른쪽에 표시
+            ticks: {
+                max: 20, // y2 축의 최대값을 20으로 제한해서 변화가 잘 보이게 설정
+                min: 1,  // 최소값 0으로 설정
+            }
+        }
+            
+      }
+   }
+});
+
+
+
+
 const myChart = new Chart(dead, {
     type: 'doughnut', // 차트 타입을 도넛으로 변경
     data: {

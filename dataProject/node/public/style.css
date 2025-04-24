@@ -364,12 +364,26 @@ body{
 	bottom:15px;
 	right:20px;
   }
+
+  #quizmessage {
+	display: none;
+	margin-top: 10px;
+	color: rgb(117, 117, 209);
+	font-family:"Helvetica";
+	font-size: 17px;
+	text-align:center
+ }
+
+
   .Jbox-bg-1{
-	background-image:url("LawBA.png");
-	background-image: -webkit-image-set(url("img/graphic-1.webp") 1x);
-  background-image: image-set(url("LawBA.png") 1x,
-  url("LawBA.png") 2x)
+	/* background-image:url("LawBA.png"); */
+	/* background-image: -webkit-image-set(url("img/graphic-1.webp") 1x); */
+  /* background-image: image-set(url("LawBA.png") 1x, */
+  /* url("LawBA.png") 2x) */
   }
+
+
+
   .Jbox-bg-2{
 	background-image:url("seniorQuiz.png");
 	background-image: -webkit-image-set(url("img/graphic-1.webp") 1x);
