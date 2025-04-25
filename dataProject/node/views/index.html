@@ -29,14 +29,7 @@
          document.getElementById("quizmessage").style.display = "block";
       }
 
-      window.onload = async function () {
 
-         const region = document.getElementById("regionSelect").value;
-         const iframe = document.getElementById("safeZoneFrame");
-         const url = `http://192.168.1.38:8000/safeZone?region=${region}`;
-
-         iframe.src = url;
-      };
    </script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -418,8 +411,10 @@
       <script src="./js/bootstrap.bundle.min.js?2023"></script>
       <script src="./js/blocs.min.js?1610"></script>
       <script src="./js/lazysizes.min.js" defer></script><!-- Additional JS END -->
-      <script src="./js/script.js"></script>
+      <script src="./js/script.js" defer></script>
       <script type="module" src="./js/acquisitions.js"></script>
+
 </body>
+
 
 </html>

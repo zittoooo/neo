@@ -84,12 +84,21 @@ async function getPer10Accident() {
 	}
 }
 
-
 async function safeZone() {
 	const region = document.getElementById("regionSelect").value;
 	const iframe = document.getElementById("safeZoneFrame");
 	const url = `http://192.168.1.38:8000/safeZone?region=${region}`;
 
 	iframe.src = url;
-	
 }
+
+window.onload = async function () {
+
+	//const region = document.getElementById("regionSelect").value;
+	//const iframe = document.getElementById("safeZoneFrame");
+	//const url = `http://192.168.1.38:8000/safeZone?region=${region}`;
+
+	//iframe.src = url;
+	safeZone();
+
+};

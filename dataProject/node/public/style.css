@@ -957,6 +957,7 @@ body{
   .safe-btn {
 	width: 80px;
 	padding: 4px;
+	z-index: 10;
   }
  
   html {
