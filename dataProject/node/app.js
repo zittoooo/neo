@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require('path');
 const app = express();
-const PORT = 8000
+const PORT = 80
 
 // 미들웨어
 app.use(express.json())
@@ -22,5 +22,5 @@ const mainRouter = require('./controllers/mainController');
 app.use('/', mainRouter)
 
 app.listen(PORT, function() {
-  console.log("8000 port : Server Started~!!");
+  console.log("80 port : Server Started~!!");
 })

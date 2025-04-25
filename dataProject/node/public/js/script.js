@@ -3,7 +3,7 @@ async function getAccidentData() {
 	const year = document.getElementById("kids_year").value;
 	const region = document.getElementById("kids_region").value;
 
-	const url = `http://192.168.1.38:8000/getKidsAcc?year=${year}&region=${region}`;
+	const url = `http://192.168.1.38:80/getKidsAcc?year=${year}&region=${region}`;
 
 	try {
 		const response = await fetch(url);
@@ -31,7 +31,7 @@ async function getSeniorAccidentData() {
 	const year = document.getElementById("senior_year").value;
 	const region = document.getElementById("senior_region").value;
 
-	const url = `http://192.168.1.38:8000/seniorAccident?year=${year}&region=${region}`;
+	const url = `http://192.168.1.38:80/seniorAccident?year=${year}&region=${region}`;
 
 	try {
 		const response = await fetch(url);
@@ -59,8 +59,8 @@ async function getPer10Accident() {
 	const year = document.getElementById("per10_year").value;
 	
 
-	const kids = `http://192.168.1.38:8000/getper10Kids?year=${year}`;
-	const senior = `http://192.168.1.38:8000/getper10Senior?year=${year}`;
+	const kids = `http://192.168.1.38:80/getper10Kids?year=${year}`;
+	const senior = `http://192.168.1.38:80/getper10Senior?year=${year}`;
 
 	try {
 		const kids_response = await fetch(kids);
@@ -87,7 +87,7 @@ async function getPer10Accident() {
 async function safeZone() {
 	const region = document.getElementById("regionSelect").value;
 	const iframe = document.getElementById("safeZoneFrame");
-	const url = `http://192.168.1.38:8000/safeZone?region=${region}`;
+	const url = `http://192.168.1.38:80/safeZone?region=${region}`;
 
 	iframe.src = url;
 }
@@ -96,7 +96,7 @@ window.onload = async function () {
 
 	//const region = document.getElementById("regionSelect").value;
 	//const iframe = document.getElementById("safeZoneFrame");
-	//const url = `http://192.168.1.38:8000/safeZone?region=${region}`;
+	//const url = `http://192.168.1.38:80/safeZone?region=${region}`;
 
 	//iframe.src = url;
 	safeZone();
