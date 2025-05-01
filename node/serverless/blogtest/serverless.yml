@@ -1,0 +1,20 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: kibwa
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: blogtest
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: blogtest09
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: ap-northeast-2
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
